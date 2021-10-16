@@ -17,9 +17,7 @@ public class RadioTest {
         radio.setCurrentRadioStation(station);
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-        System.out.println("прямая установка  " + "кнопка " + station);
-        System.out.print("ожидаемый результат " + expected);
-        System.out.println(" фактический результат " + actual);
+
     }
 
     //      тестирую метод переключения станции кнопкой next
@@ -31,9 +29,7 @@ public class RadioTest {
         radio.nextStationButton();
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-        System.out.println("установленная станция " + station + " кнопка +");
-        System.out.print("ожидаемый результат " + expected);
-        System.out.println(" фактический результат " + actual);
+
     }
 
     //      тестирую метод переключения станции кнопкой prev
@@ -45,9 +41,7 @@ public class RadioTest {
         radio.prevStationButton();
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-        System.out.println("установленная станция " + station + " кнопка -");
-        System.out.print("ожидаемый результат " + expected);
-        System.out.println(" фактический результат " + actual);
+
     }
 
     //      тестирую метод переключения громкости +
@@ -59,9 +53,7 @@ public class RadioTest {
         radio.increaseVolume();
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-        System.out.println("установленная громкость " + volume + " кнопка +");
-        System.out.print("ожидаемый результат " + expected);
-        System.out.println(" фактический результат " + actual);
+
     }
 
     @ParameterizedTest
@@ -72,9 +64,7 @@ public class RadioTest {
         radio.decreaseVolume();
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-        System.out.println("установленная громкость " + volume + " кнопка -");
-        System.out.print("ожидаемый результат " + expected);
-        System.out.println(" фактический результат " + actual);
+
 
     }
 }
