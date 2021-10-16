@@ -41,7 +41,7 @@ public class RadioTest {
     //      тестирую метод переключения станции кнопкой prev
     @ParameterizedTest
     @CsvFileSource(resources = "/dataPrev.csv")
-    public void prevStationButtonTest(int station, int expected) {
+    public void shouldPrevStationButtonTest(int station, int expected) {
 //        Radio radio = new Radio();
         radio.setCurrentRadioStation(station);
         radio.prevStationButton();
@@ -55,7 +55,7 @@ public class RadioTest {
     //      тестирую метод переключения громкости +
     @ParameterizedTest
     @CsvFileSource(resources = "/dataVolume+.csv")
-    public void currentVolumeIncreaseTest(int volume, int expected) {
+    public void shouldVolumeIncreaseTest(int volume, int expected) {
 //        Radio radio = new Radio();
         radio.setCurrentVolume(volume);
         radio.increaseVolume();
@@ -68,7 +68,7 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/dataVolume-.csv")
-    public void currentVolumeDecreaseTest(int volume, int expected) {
+    public void shouldVolumeDecreaseTest(int volume, int expected) {
 //        Radio radio = new Radio();
         radio.setCurrentVolume(volume);
         radio.decreaseVolume();
