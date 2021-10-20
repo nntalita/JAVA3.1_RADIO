@@ -5,17 +5,25 @@ public class Radio {
 
     private int currentVolume;
     private int currentRadioStation;
+    private int numberRadioStation = 10;
 
+public Radio (){
+    this.numberRadioStation = numberRadioStation - 1;
+}
+public Radio (int numberRadioStation){
+    this.numberRadioStation = numberRadioStation - 1;
+
+}
     //    количество доступных станций
     public int getMaxStation() {
 
-        return 9;
+        return numberRadioStation;
     }
 
     //   предел громкости
     public int getMaxVolume() {
 
-        return 10;
+        return 100;
     }
 // НАСТРОЙКА
 
