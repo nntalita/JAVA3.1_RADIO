@@ -1,5 +1,10 @@
 package ru.netology.domain;
 
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+
 public class Radio {
 
 
@@ -7,17 +12,18 @@ public class Radio {
     private int currentRadioStation;
     private int numberRadioStation = 10;
 
-public Radio (){
-    this.numberRadioStation = numberRadioStation - 1;
-}
+    int maxNumberRadioStation = numberRadioStation - 1;
+
+//
 public Radio (int numberRadioStation){
-    this.numberRadioStation = numberRadioStation - 1;
+    this.numberRadioStation = numberRadioStation;
+    maxNumberRadioStation = this.numberRadioStation - 1;
 
 }
     //    количество доступных станций
     public int getMaxStation() {
 
-        return numberRadioStation;
+        return maxNumberRadioStation;
     }
 
     //   предел громкости
